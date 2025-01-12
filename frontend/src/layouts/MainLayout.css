@@ -1,0 +1,17 @@
+
+.main-layout {
+    position: relative;
+    background-color: #f9fafb; /* Equivalent to Tailwind's bg-gray-50 */
+    height: 100vh; /* Equivalent to h-screen */
+    width: 100vw; /* Equivalent to w-screen */
+    overflow-x: hidden;
+  }
+  
+  /* Content area below the Navbar */
+  .main-content {
+    
+    background-color:rgb(111, 0, 255);
+    height: 100%; /* Ensures full height for scrolling */
+    overflow-y: auto; /* Enables vertical scrolling if content overflows */
+  }
+  

@@ -1,0 +1,80 @@
+/* SignupForm.css */
+body{
+    background-color: #ca8383;
+}
+.signup-form {
+    margin: 4rem auto;
+    padding: 2rem;
+    max-width: 500px;
+    background-color: rgb(46, 167, 140);
+    border: 2px solid #e5e7eb;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .form-title {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 1.5rem;
+    color: rgb(12, 2, 22);
+  }
+  
+  .input-group {
+    margin-bottom: 1rem;
+  }
+  
+  .required-field::after {
+    content: '*';
+    margin-left: 0.5rem;
+    color: red;
+  }
+  
+  .error-message {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #f87171;
+    display: none;
+  }
+  
+  .error-message.show {
+    display: block;
+  }
+  
+  .submit-btn {
+    width: 30%;
+    padding: 0.5rem 1rem;
+    background-color: #3bf64b;
+    color: rgb(1, 10, 1);
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #2563eb;
+  }
+  
+  .login-link {
+    padding-top: 1rem;
+    text-align: center;
+  }
+  
+  .login-text {
+    color: #0f0102;
+    text-decoration: none;
+  }
+  
+  .login-text:hover {
+    text-decoration: underline;
+  }
+  
+  /* For mobile responsiveness */
+  @media (max-width: 768px) {
+    .signup-form {
+      width: 90%;
+      padding: 1rem;
+    }
+  }
+  

@@ -1,0 +1,79 @@
+/* LoginForm.css */
+body{
+    background-color: red;
+}
+.login-form {
+    margin: 4rem auto;
+    padding: 2rem;
+    max-width: 500px;
+    background-color: rgb(52, 81, 211);
+    border: 2px solid #e5e7eb;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .form-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .input-group {
+    margin-bottom: 1rem;
+  }
+  
+  .required-field::after {
+    content: '*';
+    margin-left: 0.5rem;
+    color: red;
+  }
+  
+  .error-message {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #f87171;
+    display: none;
+  }
+  
+  .error-message.show {
+    display: block;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: #3b82f6;
+    color: rgb(165, 9, 9);
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #ebe825;
+  }
+  
+  .signup-link {
+    padding-top: 1rem;
+    text-align: center;
+  }
+  
+  .signup-text {
+    color: #030a16;
+    text-decoration: none;
+  }
+  
+  .signup-text:hover {
+    color: #ebe825;
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .login-form {
+      width: 90%;
+      padding: 1rem;
+    }
+  }
+  

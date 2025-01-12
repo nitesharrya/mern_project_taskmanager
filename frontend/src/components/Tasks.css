@@ -1,0 +1,102 @@
+/* Tasks.css */
+.tasks-container {
+    height: 100%;
+    background-color: yellow;
+    margin: 1rem auto;
+    max-width: 700px;
+    /* padding: 1rem; */
+  }
+  
+  .tasks-title {
+    color: #10b981;
+    /* margin: 0.5rem 0 1rem 0.5rem; */
+    font-size: 1.25rem;
+  }
+  
+  .no-tasks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 30px;
+    height: 300px;
+    width: 600px;
+    color: #031811;
+    margin: 0 auto;
+    gap: 1rem;
+  }
+  
+  .add-task-btn {
+    background-color: #3b82f6;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-task-btn:hover {
+    background-color: #2563eb;
+  }
+  
+  .task-card {
+    background-color: white;
+    margin: 1rem 0;
+    padding: 1rem;
+    color: #4b5563;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .task-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .task-number {
+    font-weight: 500;
+  }
+  
+  .edit-icon,
+  .delete-icon {
+    margin-left: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .edit-icon {
+    color: #10b981;
+    margin-right: 0.5rem;
+  }
+  
+  .edit-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  .delete-icon {
+    color: #ef4444;
+  }
+  
+  .delete-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  .task-description {
+    margin-top: 1rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .no-tasks {
+      width: 90%;
+      height: auto;
+    }
+  
+    .add-task-btn {
+      padding: 0.5rem 0.75rem;
+    }
+  }
+  

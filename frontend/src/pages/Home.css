@@ -1,0 +1,51 @@
+.home-guest {
+    background-color: var(--primary-color, #007bff); /* Replace with your primary color */
+    color:black;
+    height: 40vh;
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  .home-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: rgb(22, 18, 22);
+  }
+  
+  .home-link {
+    margin-top: 2.5rem;
+    font-size: 1.25rem;
+    display: inline-block;
+    transition: margin 0.3s ease;
+  }
+  
+  .home-link:hover .home-link-text {
+    margin-right: 0.25rem;
+    color: rgb(160, 214, 35);
+  }
+  
+  .home-link:hover .home-link-icon {
+    margin-left: 0.25rem;
+  }
+  
+  .home-link-text {
+    transition: margin 0.3s ease;
+  }
+  
+  .home-link-icon {
+    margin-left: 1rem;
+    font-size: 1rem;
+    transition: margin 0.3s ease;
+  }
+  
+  .home-welcome {
+    font-size: 40px;
+    font-weight: 700;
+    color: red;
+    text-align: center;
+    /* font-size: 1.125rem; */
+    margin: 2rem;
+    border-bottom: 1px solid #d1d5db;
+  }
+  
+  
