@@ -1,5 +1,19 @@
 const mongoose = require("mongoose");
 
+// const taskSchema = new mongoose.Schema({
+//   user: {
+//     type: mongoose.Schema.Types.ObjectId,
+//     ref: "User",
+//     required: true
+//   },
+//   description: {
+//     type: String,
+//     required: true,
+//   },
+// }, {
+//   timestamps: true
+// });
+
 const taskSchema = new mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
@@ -10,9 +24,18 @@ const taskSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  taskDate:{
+    type:Date,
+    required: true
+  },
+  taskDeadLine:{
+    type:Date,
+    required: true
+  }
 }, {
   timestamps: true
 });
+
 
 
 const Task = mongoose.model("Task", taskSchema);

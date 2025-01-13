@@ -87,6 +87,72 @@ import Loader from './utils/Loader';
 import Tooltip from './utils/Tooltip';
 import './Tasks.css';
 
+// const Tasks = () => {
+//   const authState = useSelector((state) => state.authReducer);
+//   const [tasks, setTasks] = useState([]);
+//   const [fetchData, { loading }] = useFetch();
+
+//   const fetchTasks = useCallback(() => {
+//     const config = { url: "/tasks", method: "get", headers: { Authorization: authState.token } };
+//     fetchData(config, { showSuccessToast: false }).then((data) => setTasks(data.tasks));
+//   }, [authState.token, fetchData]);
+
+//   useEffect(() => {
+//     if (!authState.isLoggedIn) return;
+//     fetchTasks();
+//   }, [authState.isLoggedIn, fetchTasks]);
+
+//   const handleDelete = (id) => {
+//     const config = { url: `/tasks/${id}`, method: "delete", headers: { Authorization: authState.token } };
+//     fetchData(config).then(() => fetchTasks());
+//   };
+
+//   return (
+//     <div className="tasks-container">
+//       {tasks.length !== 0 && <h2 className="tasks-title">Your tasks ({tasks.length})</h2>}
+//       {loading ? (
+//         <Loader />
+//       ) : (
+//         <div>
+//           {tasks.length === 0 ? (
+//             <div className="no-tasks">
+//               <span>No tasks found</span>
+//               <Link to="/tasks/add" className="add-task-btn">
+//                 + Add new task
+//               </Link>
+//             </div>
+//           ) : (
+//             tasks.map((task, index) => (
+//               <div key={task._id} className="task-card">
+//                 <div className="task-header">
+//                   <span className="task-number">Task #{index + 1}</span>
+
+//                   <Tooltip text="Edit this task" position="top">
+//                     <Link to={`/tasks/${task._id}`} className="edit-icon">
+//                       <i className="fa-solid fa-pen"></i>
+//                     </Link>
+//                   </Tooltip>
+
+//                   <Tooltip text="Delete this task" position="top">
+//                     <span
+//                       className="delete-icon"
+//                       onClick={() => handleDelete(task._id)}
+//                     >
+//                       <i className="fa-solid fa-trash"></i>
+//                     </span>
+//                   </Tooltip>
+//                 </div>
+//                 <div className="task-description">{task.description}</div>
+//               </div>
+//             ))
+//           )}
+//         </div>
+//       )}
+//     </div>
+//   );
+// };
+
+// export default Tasks;
 const Tasks = () => {
   const authState = useSelector((state) => state.authReducer);
   const [tasks, setTasks] = useState([]);
@@ -143,6 +209,8 @@ const Tasks = () => {
                   </Tooltip>
                 </div>
                 <div className="task-description">{task.description}</div>
+                <div className="task-date">Task Date: {new Date(task.taskDate).toLocaleDateString()}</div>
+                <div className="task-deadline">Deadline: {new Date(task.taskDeadLine).toLocaleDateString()}</div>
               </div>
             ))
           )}
@@ -151,5 +219,4 @@ const Tasks = () => {
     </div>
   );
 };
-
-export default Tasks;
+export default Tasks
